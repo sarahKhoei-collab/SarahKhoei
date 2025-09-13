@@ -1,0 +1,154 @@
+\
+/* ======================================================================
+   Minimalist academic site — v2 (closer to classic personal finance sites)
+   - Serif typography, thin rules, generous whitespace
+   - Single-column content (max ~72ch)
+   - Understated link styling, no boxes or cards
+   - Dark mode supported via color-scheme + toggle
+   - Responsive: collapses nav to hamburger
+   ====================================================================== */
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #5b5b5b;
+  --rule: #e6e6e6;
+  --link: #0a4bcc;
+  --link-visited: #5a2ca0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0d0f;
+    --text: #eaeaec;
+    --muted: #b2b2b7;
+    --rule: #2a2a32;
+    --link: #8ab4ff;
+    --link-visited: #c58af9;
+  }
+}
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container { width: min(92vw, 72ch); margin: 0 auto; padding: 1.25rem 1rem; }
+
+/* Header */
+.site-header { position: sticky; top: 0; background: var(--bg); }
+.hdr { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .2px; color: var(--text); text-decoration: none; }
+.rule { border: none; border-top: 1px solid var(--rule); margin: 0; }
+
+.site-nav { display: flex; align-items: center; gap: .75rem; }
+.site-nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: .25rem .35rem;
+  border-radius: .25rem;
+}
+.site-nav a:hover { text-decoration: underline; }
+.site-nav a.active, .site-nav a[aria-current="page"] {
+  outline: 1px solid var(--rule);
+}
+
+.theme-toggle {
+  margin-left: .5rem;
+  font: inherit;
+  padding: .25rem .45rem;
+  border: 1px solid var(--rule);
+  background: transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+
+/* Mobile nav */
+.nav-toggle { display: none; background: none; border: none; padding: .25rem; cursor: pointer; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 4px 0; }
+@media (max-width: 720px) {
+  .nav-toggle { display: block; }
+  .site-nav {
+    position: absolute; right: 1rem; top: 54px; display: none; flex-direction: column;
+    background: var(--bg); border: 1px solid var(--rule); padding: .5rem; border-radius: .5rem;
+  }
+  .site-nav[data-expanded="true"] { display: flex; }
+}
+
+/* Typography */
+h1, h2, h3 { line-height: 1.25; margin: 1.25rem 0 .25rem; }
+.lead { color: var(--muted); margin-top: 0; }
+.bio { margin-top: .5rem; }
+.simple-list { padding-left: 1.1rem; }
+.simple-list li { margin: .25rem 0; }
+.links-inline { list-style: none; padding: 0; display: flex; gap: .75rem; flex-wrap: wrap; }
+.links-inline li a { text-decoration: underline; }
+
+/* Home split */
+.home-split { display: grid; grid-template-columns: 1.6fr .8fr; gap: 2rem; align-items: start; }
+.headshot img { width: 100%; border-radius: 6px; border: 1px solid var(--rule); }
+@media (max-width: 880px) { .home-split { grid-template-columns: 1fr; } }
+
+/* Papers */
+.paper { margin: 1rem 0; padding-bottom: .75rem; border-bottom: 1px solid var(--rule); }
+.paper-title { font-weight: 600; margin: 0; }
+.paper-title .badge {
+  display: inline-block; font-size: .72rem; margin-left: .5rem; border: 1px solid var(--rule); padding: .05rem .35rem; border-radius: .25rem;
+}
+.paper-meta { color: var(--muted); margin: .25rem 0 .5rem; }
+.abstract-toggle {
+  background: transparent; border: 1px solid var(--rule); border-radius: .25rem;
+  padding: .25rem .45rem; cursor: pointer; font: inherit;
+}
+.abstract {
+  margin-top: .5rem;
+  padding-left: .75rem;
+  border-left: 2px solid var(--rule);
+}
+
+/* Style the text inside abstracts */
+.abstract,
+.abstract p {
+  text-align: justify;       /* aligns left & right edges */
+  text-justify: inter-word;  /* spaces words more evenly */
+  hyphens: auto;             /* allows word breaks if needed */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+.abstract p {
+  text-align-last: justify;
+}
+
+/* Courses */
+.course { margin: 1rem 0; padding-bottom: .75rem; border-bottom: 1px solid var(--rule); }
+.course-title { font-weight: 600; margin: 0; }
+.term { color: var(--muted); font-weight: 400; }
+.course-desc { margin: .35rem 0; }
+.pdf::after { content: " (PDF)"; font-size: .85em; color: var(--muted); }
+
+/* Buttons */
+.btn {
+  display: inline-block; text-decoration: none; border: 1px solid var(--rule); padding: .35rem .6rem; border-radius: .25rem; color: var(--text);
+}
+
+/* Links */
+a { color: var(--link); }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+
+/* Accessibility */
+.skip-link {
+  position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus { position: static; width: auto; height: auto; padding: .35rem .6rem; background: var(--link); color: white; border-radius: .25rem; }
+
+/* Footer */
+.site-footer { margin-top: 3rem; }
+.site-footer .small { color: var(--muted); font-size: .9rem; }
