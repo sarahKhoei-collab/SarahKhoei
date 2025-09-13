@@ -348,6 +348,89 @@ a:hover { text-decoration: underline; }
   #site-nav .theme-toggle + a{
     border-top:1px solid rgba(0,0,0,.08);
   }
+/* =========================================================
+   MOBILE HAMBURGER MENU
+   ========================================================= */
+
+/* Hamburger icon */
+.nav-toggle{
+  display:none;                      /* shown on phones below */
+  align-items:center; justify-content:center;
+  width:44px;height:44px;
+  border:1px solid rgba(0,0,0,.12);
+  border-radius:10px;
+  background:var(--bg,#fff);
+  cursor:pointer;
+  z-index:1001;                      /* above the panel */
+}
+.nav-toggle span{
+  display:block;
+  width:22px; height:2.5px;
+  background:currentColor;
+  position:relative;
+}
+.nav-toggle span + span{ margin-top:5px; }
+
+/* Desktop nav stays inline */
+.site-nav{
+  display:flex;
+  gap:.8rem;
+  align-items:center;
+}
+
+/* Phones */
+@media (max-width: 720px){
+
+  /* Header layout: brand on left, hamburger on right */
+  .site-header .hdr{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:8px 14px;
+  }
+
+  .nav-toggle{ display:inline-flex; }
+
+  /* Safe default: if JS hasn't run, show menu (no one gets stuck) */
+  #site-nav{
+    display:block !important;
+  }
+
+  /* When JS is present, collapse by default and open on toggle */
+  .js #site-nav{
+    position:fixed;
+    left:0; right:0;
+    top:64px;                         /* adjust if your header is taller/shorter */
+    max-height:0;                     /* collapsed */
+    overflow:hidden;
+    background:var(--bg,#fff);
+    box-shadow:0 10px 24px rgba(0,0,0,.08);
+    transition:max-height .25s ease;
+    z-index:1000;
+    padding:0;
+  }
+  .js #site-nav.open{ max-height:70vh; }
+
+  /* Vertical, left-aligned links inside the panel */
+  #site-nav a,
+  #site-nav .theme-toggle{
+    display:block !important;
+    text-align:left;
+    font-size:16.5px;
+    line-height:1.35;
+    padding:12px 16px;
+    margin:0 !important;
+    border:0;
+  }
+  #site-nav a + a,
+  #site-nav a + .theme-toggle,
+  #site-nav .theme-toggle + a{
+    border-top:1px solid rgba(0,0,0,.08);
+  }
+
+  /* Prevent background scroll when menu is open */
+  body.nav-open{ overflow:hidden; }
+}
 
   /* Prevent background scrolling when menu is open */
   body.nav-open{ overflow:hidden; }
