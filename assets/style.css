@@ -681,3 +681,28 @@ body.dark .rule {
 body.dark .theme-toggle::before {
   content: "🌙";   /* dark mode icon */
 }
+/* === Theme toggle button styling === */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 50%;
+  background: var(--bg, #fff);
+  cursor: pointer;
+  margin-left: .5rem;
+  font-size: 1.2rem;   /* size for the emoji */
+  line-height: 1;
+}
+
+/* Default icon (light mode) */
+.theme-toggle::before {
+  content: "☀️";
+}
+
+/* Dark mode icon */
+body.dark .theme-toggle::before {
+  content: "🌙";
+}
