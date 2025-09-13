@@ -671,3 +671,13 @@ body.dark .site-footer {
 body.dark .rule {
   border-top: 1px solid var(--rule);
 }
+/* === Theme toggle icon === */
+.theme-toggle::before {
+  content: "☀️";   /* light mode icon */
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+body.dark .theme-toggle::before {
+  content: "🌙";   /* dark mode icon */
+}
