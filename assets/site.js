@@ -56,3 +56,39 @@
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })(); 
+// --- Mobile nav toggle ---
+(function () {
+  var navToggle = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('site-nav');
+  if (!navToggle || !nav) return;
+
+  function setExpanded(isOpen) {
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    if (isOpen) {
+      nav.classList.add('open');
+      document.body.classList.add('nav-open');
+    } else {
+      nav.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    }
+  }
+
+  navToggle.addEventListener('click', function () {
+    var isOpen = !nav.classList.contains('open');
+    setExpanded(isOpen);
+  });
+
+  // Close menu when a link is tapped
+  nav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { setExpanded(false); });
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setExpanded(false);
+  });
+
+  // Ensure aria-expanded is correct on load
+  setExpanded(false);
+})();
+
