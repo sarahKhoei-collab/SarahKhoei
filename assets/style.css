@@ -220,3 +220,78 @@ a:hover { text-decoration: underline; }
   body.nav-open { overflow: hidden; }
 }
 
+/* ===== Mobile nav: safe-by-default behavior ===== */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 8px;
+  background: var(--bg, #fff);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px; height: 2px;
+  background: currentColor;
+  position: relative;
+}
+.nav-toggle span + span { margin-top: 4px; }
+
+.site-nav {
+  display: flex;                /* desktop default */
+  gap: .75rem;
+  align-items: center;
+}
+
+/* --- Phones / narrow screens --- */
+@media (max-width: 720px) {
+  .site-header .hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-toggle { display: inline-flex; }
+
+  /* DEFAULT on small screens (no-JS fallback): menu is visible */
+  #site-nav {
+    position: static;
+    display: block !important;      /* stack links */
+    max-height: none;
+    overflow: visible;
+    background: var(--bg, #fff);
+    box-shadow: none;
+    z-index: 999;
+  }
+
+  #site-nav a,
+  #site-nav .theme-toggle {
+    display: block;
+    padding: .9rem 1rem;
+    border-top: 1px solid rgba(0,0,0,.06);
+    min-height: 44px;
+  }
+
+  /* IF JS is present, collapse by default and open on toggle */
+  .js #site-nav {
+    position: fixed;
+    left: 0; right: 0;
+    top: 56px;                      /* adjust if your header is taller */
+    max-height: 0;                  /* collapsed */
+    overflow: hidden;
+    background: var(--bg, #fff);
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+    transition: max-height .25s ease;
+  }
+
+  .js #site-nav.open {
+    max-height: 70vh;               /* reveals the menu */
+  }
+
+  /* Prevent page scroll when menu is open */
+  body.nav-open { overflow: hidden; }
+}
+
