@@ -644,3 +644,30 @@ a:hover { text-decoration: underline; }
     text-align: left !important;
   }
 }
+/* === Dark mode styles === */
+body.dark {
+  --bg: #111;               /* background */
+  --text: #f5f5f5;          /* text color */
+  --rule: #333;             /* border color */
+  --link: #4da6ff;          /* link color */
+}
+
+body.dark {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.dark a {
+  color: var(--link);
+}
+
+body.dark .site-header,
+body.dark .site-footer {
+  background: #111;
+  color: #f5f5f5;
+  box-shadow: 0 1px 0 rgba(255,255,255,.08);
+}
+
+body.dark .rule {
+  border-top: 1px solid var(--rule);
+}
