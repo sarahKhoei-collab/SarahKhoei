@@ -614,3 +614,33 @@ a:hover { text-decoration: underline; }
 
   body.nav-open{ overflow:hidden !important; }
 }
+
+
+/* === Desktop enforcement (>1024px): hide hamburger, show inline menu === */
+@media (min-width: 1025px){
+  .nav-toggle{
+    display: none !important;          /* hide the button on laptops/desktops */
+  }
+  .site-nav{
+    display: flex !important;          /* inline menu */
+    gap: .8rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* ensure no mobile panel styles leak into desktop */
+  .js #site-nav{
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+  }
+  #site-nav a,
+  #site-nav .theme-toggle{
+    display: inline-block !important;
+    padding: 0 !important;
+    border: 0 !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+}
