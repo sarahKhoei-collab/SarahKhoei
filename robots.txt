@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://sarahkhoei-collab.github.io/SarahKhoei/index.html
+
+Sitemap: https://sarahkhoei-collab.github.io/sitemap.xml
