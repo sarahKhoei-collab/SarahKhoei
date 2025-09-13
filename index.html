@@ -1,1 +1,178 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>Sarah Khoei — Ph.D. Candidate in Finance</title> <meta name="description" content="I am a Ph.D. Candidate in Finance, and I will be on the academic job market in 2025–2026." /> <link rel="icon" href="assets/img/favicon.png" type="image/png" /> <link rel="preload" href="assets/style.css" as="style" /> <link rel="stylesheet" href="assets/style.css" /> <meta property="og:type" content="website" /> <meta property="og:title" content="Sarah Khoei — Ph.D. Candidate in Finance" /> <meta property="og:description" content="I am a Ph.D. Candidate in Finance, and I will be on the academic job market in 2025–2026." /> <meta property="og:image" content="assets/img/headshot-placeholder.png" /> <meta name="twitter:card" content="summary_large_image" /> <meta name="twitter:title" content="Sarah Khoei — Ph.D. Candidate in Finance" /> <meta name="twitter:description" content="I am a Ph.D. Candidate in Finance, and I will be on the academic job market in 2025–2026." /> <meta name="twitter:image" content="assets/img/headshot-placeholder.png" /> <!-- Page-specific: intro layout with headshot on the right --> <style> /* --- Sticky, non-overlapping header --- */ .site-header{ position: sticky; /* keep nav at the top while scrolling */ top: 0; z-index: 1000; /* above page content */ background: var(--bg, #fff); /* solid bg so content doesn't show through */ box-shadow: 0 1px 0 rgba(0,0,0,.08); } .site-header .hdr, #site-nav{ background: inherit; } .site-header .rule{ border: 0; border-top: 1px solid rgba(0,0,0,.08); margin: 0; } /* tiny cushion so content never tucks under the sticky bar */ main.container{ padding-top: .4rem; } /* Make the page container wider so the first line can hold more text */ .container-wide { max-width: min(1800px, 99vw); } /* Align the "Sarah Khoei" hero title vertically with other pages' H1 (adds a consistent top offset like the .section-gap on Research/Teaching) */ :root { --hero-top-offset: 1.25rem; } /* tweak this if you want more/less */ .intro { margin-top: var(--hero-top-offset); /* <-- pushes the hero down */ min-height: 52dvh; display: grid; align-items: center; padding-block: 1.5vh 0; } .intro-layout { display: flex; align-items: center; gap: clamp(1.25rem, 4vw, 2.5rem); width: 100%; } /* Let the text use most of the row */ .intro-copy { flex: 1 1 85%; max-width: none; padding-right: .25rem; } /* Add space between name and description */ .intro-copy h1 { margin: 0 0 clamp(.6rem, 1.2vw, 1.1rem) 0; line-height: 1.1; } /* Italic research interests line */ .research-line { font-style: italic; margin-top: .6rem; /* space after the description */ opacity: .95; } /* Move headshot a little to the right */ .intro-photo { flex: 0 0 auto; margin: 0; display: flex; align-items: center; margin-left: auto; padding-left: clamp(1rem, 3vw, 2rem); } /* Slightly smaller photo to free width for the first line */ .intro-photo img { display: block; width: 180px; max-width: 24vw; height: auto; border-radius: .5rem; } .lead { text-align: justify; text-align-last: left; -moz-text-align-last: left; text-justify: inter-word; hyphens: auto; line-height: 1.6; max-width: none; font-size: 0.96rem; } /* Keep a key phrase unbroken */ .nowrap { white-space: nowrap; } @media (max-width: 720px) { /* slightly smaller offset on small screens to keep things tidy */ :root { --hero-top-offset: .9rem; } .intro { min-height: 46dvh; padding-block: 1vh 0; } .intro-layout { flex-direction: column-reverse; align-items: flex-start; gap: 1.25rem; } .intro-photo { margin-left: 0; padding-left: 0; } .intro-photo img { width: 170px; max-width: 60vw; } .lead { text-align: left; hyphens: auto; font-size: 1rem; } } </style> <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "name": "Sarah Khoei", "jobTitle": "Ph.D. Candidate in Finance", "sameAs": [ "https://scholar.google.com/your-profile", "https://ssrn.com/your-profile", "https://orcid.org/0000-0000-0000-0000", "https://www.linkedin.com/in/your-profile" ] } </script> </head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header" role="banner"> <div class="container hdr"> <a class="brand" href="index.html"></a> <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false"> <span></span><span></span><span></span> </button> <nav id="site-nav" class="site-nav" role="navigation" aria-label="Main"> <a href="index.html" aria-current="page" class="active">Home</a> <a href="research.html">Research</a> <a href="teaching.html">Teaching</a> <a href="cv.html">CV</a> <a href="contact.html">Contact</a> <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"></button> </nav> </div> <hr class="rule"/> </header> <main id="main" class="container container-wide" role="main"> <section class="intro"> <div class="intro-layout"> <!-- Left: text --> <div class="intro-copy"> <h1>Sarah Khoei</h1> <p class="lead"> I am a Ph.D. candidate in Finance at the <span class="nowrap">University&nbsp;of&nbsp;Kentucky</span> and will be on the 2025–2026 academic job market. My research sits at the intersection of household finance, public policy, and FinTech, with a primary focus on U.S. consumer credit. My current projects (i) test the fragility of automated underwriting under stress and data uncertainty, (ii) study policy pass-through with an emphasis on how financial intermediaries shape outcomes in auto lease markets, and (iii) quantify how exogenous interest-rate shocks affect borrower default. My work has been presented at leading conferences, including the American Finance Association (AFA) and the Financial Management Association (FMA). In the classroom, I served as the primary instructor at the undergraduate level, where I emphasized clarity, fairness, and timely feedback to foster student learning and success. </p> <!-- Italic line after description --> <p class="research-line"><em>Research interests: household finance, public policy, FinTech, corporate finance</em></p> </div> <!-- Right: headshot --> <figure class="intro-photo"> <img src="assets/img/headshot.jpg" alt="Headshot of Sarah Khoei" /> </figure> </div> </section> </main> <footer class="site-footer" role="contentinfo"> <hr class="rule"/> <div class="container"> <p>&copy; <span id="year"></span>2025 Sarah Khoei.</p> </div> </footer> <script src="assets/site.js" defer></script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sarah Khoei — Ph.D. Candidate in Finance</title>
+<meta name="description" content="I am a Ph.D. Candidate in Finance, and I will be on the academic job market in 2025–2026." />
+<link rel="icon" href="assets/img/favicon.png" type="image/png" />
+<link rel="preload" href="assets/style.css" as="style" />
+<link rel="stylesheet" href="assets/style.css" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sarah Khoei — Ph.D. Candidate in Finance" />
+<meta property="og:description" content="I am a Ph.D. Candidate in Finance, and I will be on the academic job market in 2025–2026." />
+<meta property="og:image" content="assets/img/headshot.JPG" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Sarah Khoei — Ph.D. Candidate in Finance" />
+<meta name="twitter:description" content="I am a Ph.D. Candidate in Finance, and I will be on the academic job market in 2025–2026." />
+<meta name="twitter:image" content="assets/img/headshot.JPG" />
+
+<!-- Page-specific: intro layout with headshot on the right -->
+<style>
+  .site-header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg, #fff);
+    box-shadow: 0 1px 0 rgba(0,0,0,.08);
+  }
+  .site-header .hdr,
+  #site-nav{ background: inherit; }
+  .site-header .rule{
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.08);
+    margin: 0;
+  }
+  main.container{ padding-top: .4rem; }
+
+  .container-wide { max-width: min(1800px, 99vw); }
+
+  :root { --hero-top-offset: 1.25rem; }
+  .intro {
+    margin-top: var(--hero-top-offset);
+    min-height: 52dvh;
+    display: grid;
+    align-items: center;
+    padding-block: 1.5vh 0;
+  }
+
+  .intro-layout {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.25rem, 4vw, 2.5rem);
+    width: 100%;
+  }
+
+  .intro-copy {
+    flex: 1 1 85%;
+    max-width: none;
+    padding-right: .25rem;
+  }
+
+  .intro-copy h1 {
+    margin: 0 0 clamp(.6rem, 1.2vw, 1.1rem) 0;
+    line-height: 1.1;
+  }
+
+  .research-line {
+    font-style: italic;
+    margin-top: .6rem;
+    opacity: .95;
+  }
+
+  .intro-photo {
+    flex: 0 0 auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-left: clamp(1rem, 3vw, 2rem);
+  }
+
+  .intro-photo img {
+    display: block;
+    width: 180px;
+    max-width: 24vw;
+    height: auto;
+    border-radius: .5rem;
+  }
+
+  .lead {
+    text-align: justify;
+    text-align-last: left;
+    -moz-text-align-last: left;
+    text-justify: inter-word;
+    hyphens: auto;
+    line-height: 1.6;
+    max-width: none;
+    font-size: 0.96rem;
+  }
+
+  .nowrap { white-space: nowrap; }
+
+  @media (max-width: 720px) {
+    :root { --hero-top-offset: .9rem; }
+    .intro { min-height: 46dvh; padding-block: 1vh 0; }
+    .intro-layout { flex-direction: column-reverse; align-items: flex-start; gap: 1.25rem; }
+    .intro-photo { margin-left: 0; padding-left: 0; }
+    .intro-photo img { width: 170px; max-width: 60vw; }
+    .lead { text-align: left; hyphens: auto; font-size: 1rem; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sarah Khoei",
+  "jobTitle": "Ph.D. Candidate in Finance",
+  "sameAs": [
+    "https://scholar.google.com/your-profile",
+    "https://ssrn.com/your-profile",
+    "https://orcid.org/0000-0000-0000-0000",
+    "https://www.linkedin.com/in/your-profile"
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="container hdr">
+    <a class="brand" href="index.html"></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" role="navigation" aria-label="Main">
+      <a href="index.html" aria-current="page" class="active">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"></button>
+    </nav>
+  </div>
+  <hr class="rule"/>
+</header>
+
+<main id="main" class="container container-wide" role="main">
+  <section class="intro">
+    <div class="intro-layout">
+      <!-- Left: text -->
+      <div class="intro-copy">
+        <h1>Sarah Khoei</h1>
+        <p class="lead">
+          I am a Ph.D. candidate in Finance at the <span class="nowrap">University&nbsp;of&nbsp;Kentucky</span> and will be on the 2025–2026 academic job market. My research sits at the intersection of household finance, public policy, and FinTech, with a primary focus on U.S. consumer credit. My current projects (i) test the fragility of automated underwriting under stress and data uncertainty, (ii) study policy pass-through with an emphasis on how financial intermediaries shape outcomes in auto lease markets, and (iii) quantify how exogenous interest-rate shocks affect borrower default. My work has been presented at leading conferences, including the American Finance Association (AFA) and the Financial Management Association (FMA). In the classroom, I served as the primary instructor at the undergraduate level, where I emphasized clarity, fairness, and timely feedback to foster student learning and success.
+        </p>
+        <p class="research-line"><em>Research interests: household finance, public policy, FinTech, corporate finance</em></p>
+      </div>
+
+      <!-- Right: headshot -->
+      <figure class="intro-photo">
+        <img src="assets/img/headshot.JPG" alt="Headshot of Sarah Khoei" />
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <hr class="rule"/>
+  <div class="container">
+    <p>&copy; <span id="year"></span> 2025 Sarah Khoei.</p>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
