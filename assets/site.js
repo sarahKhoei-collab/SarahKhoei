@@ -1,4 +1,7 @@
 \
+// Mark that JS is available (used by CSS to switch behavior)
+document.documentElement.classList.add('js');
+
 // Minimal JS: mobile nav, theme toggle, abstract toggles, copy email, footer year.
 (function() {
   // Mobile nav
