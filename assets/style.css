@@ -706,3 +706,19 @@ body.dark .theme-toggle::before {
 body.dark .theme-toggle::before {
   content: "🌙";
 }
+
+.pdf-button {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-top: 8px;
+  background-color: #1a73e8; /* Button color */
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+  background-color: #0c52b5; /* Darker shade on hover */
+}
